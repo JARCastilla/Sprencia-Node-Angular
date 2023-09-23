@@ -1,0 +1,37 @@
+@hostname = http://localhost
+@port = 3000
+@url = {{hostname}}:{{port}}
+
+
+//Crear actividades
+###
+POST {{url}}/api/actividades
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3Vhcmlvc19pZCI6MiwidXN1YXJpb3Nfcm9sIjoiYWRtaW5pc3RyYWRvciIsImV4cCI6MTY5MjI4NTI0OCwiaWF0IjoxNjkxNjgwNDQ4fQ.eDCNBx_EuzEOaH0gAY3l0EJOyThqE4q67_3-XN2dE-Y
+Content-Type: application/json
+
+{
+  "titulo": "generación 21",
+  "descripcion": "imagen",
+  "resumen": "prueba",
+  "categorias": "Arte",
+  "ciudades": "Madrid",
+  "precio": "180"
+}
+
+###
+GET {{url}}/api/actividades/
+
+
+//Recuperar actividades
+###
+GET {{url}}/api/actividades?limit=20&page=1
+
+//Recupera un actividades específico
+###
+GET {{url}}/api/actividades/6
+
+//Actualizar actividades
+###
+PUT {{url}}/api/actividades/11
+Content-Type: application/json
+
