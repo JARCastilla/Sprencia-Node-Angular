@@ -1,0 +1,20 @@
+<section class="container">
+  <app-activities-list></app-activities-list>
+  <section class="container">
+    <h2 class="p-2">Actividades</h2>
+    <div class="row">
+      <article class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let actividad of actividades">
+        <div class="activity-box">
+          <h5 class="activity-title">{{ actividad.titulo }}</h5>
+          <p class="activity-description">{{ actividad.descripcion }}</p>
+          <a [routerLink]="['/actividades']" class="btn btn-primary">Ver más</a>
+        </div>
+      </article>
+    </div>
+  </section>
+  
+  
+</section>
+<aside>
+  <app-opinions-list></app-opinions-list>
+</aside>

@@ -1,0 +1,62 @@
+<!-- Obtenemos todas las actividades de la base de datos y sus imagenes-->
+
+
+
+<div class="card">
+  <!-- <div class="header">
+     <img [src]="'http://localhost:3000/images/'+activity.images[0]" class="img-fluid" [alt]="activity.title">
+   </div> -->
+   <div class="info">
+     <p class="title">{{activity?.titulo | titlecase}}</p>
+     <p>{{activity?.descripcion | titlecase}}</p>
+     
+   </div>
+   <div class="footer">
+     <p class="tag">{{activity?.precio}}€</p>
+
+   </div>
+ </div>
+
+
+ <section class="container">
+  <!-- <div class="row">
+    
+      <h1 class="d-flex justify-content-center">{{activity?.titulo | titlecase}}</h1>
+
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <div *ngFor="let image of arrImagenes">
+            <img class="img-thumbnail" alt="actividades" width="304" height="236"
+              [src]="'http://localhost:3000/images/'+image">
+          </div>
+        </div>
+      </div>
+    
+  </div>-->
+
+
+
+  <div class="d-flex m-3">
+    <button class="button me-3" [routerLink]="['/actividades']">Volver a todas las actividades</button>
+    <button class="button">Comprar</button>
+  </div>
+</section>
+
+  <div class="container d-flex justify-content-center">
+    
+    <div class="container">
+      <div class="d-flex justify-content-center">
+        <h2>Opiniones</h2>
+      </div>
+      <div class="opinions">
+        <div class="opinion card my-3" *ngFor="let opinion of arrOpinions">
+          <div class="card-body">
+            <h5 class="card-title">{{ opinion.nombre }}:</h5>
+            <p class="card-text">{{ opinion.texto }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   
+  </div>

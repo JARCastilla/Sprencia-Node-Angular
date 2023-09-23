@@ -1,0 +1,21 @@
+/* Color fondo cabecera */
+.navbar {
+  background: #292b2c;
+}
+
+/* Color botones cabecera */
+.badge {
+  color: #e8e8eb;
+}
+
+.badge:hover {
+  color: black;
+}
+
+/* Color de fondo menu responsive  */
+.offcanvas,
+.offcanvas-lg,
+.offcanvas-sm,
+.offcanvas-xl {
+  --bs-offcanvas-bg: #65727e;
+}
